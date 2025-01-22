@@ -1,24 +1,28 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import "./logger.js";
+import "./displayLog.js";
+import "./assets/styles.css";
+import "./assets/example_001.css";
+import "./assets/example_002.css";
+// import styles from "./assets/styles.css?inline";
+import stylesExercise_003 from "./assets/exercise_003.module.css";
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+import { borderRadius as borderRound } from "./assets/exercise_003.module.css";
 
-setupCounter(document.querySelector('#counter'))
+import collect from "collect.js";
+const avarage = collect([1, 2, 3, 4]).avg();
+console.log("Avarage: ", avarage);
+
+console.log(stylesExercise_003);
+
+// const styleElement = document.createElement("style");
+// styleElement.innerText = styles;
+// document.querySelector("head").appendChild(styleElement);
+
+// document.querySelector(
+//   ".heading"
+// ).className = `${stylesExercise_003.heading} ${stylesExercise_003.border2px}`;
+document.querySelector(".heading").className = [
+  stylesExercise_003.heading,
+  stylesExercise_003.border2px,
+  borderRound,
+].join(" ");
