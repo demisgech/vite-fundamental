@@ -1,4 +1,15 @@
-body {
+.container {
   background-color: black;
   color: aliceblue;
+  padding: 2rem;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.link {
+  background-color: dodgerblue;
 }
